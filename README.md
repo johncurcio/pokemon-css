@@ -1,4 +1,4 @@
-![logo](logo.png)
+![banner](banner.png)
 ---
 
 Pokédex in CSS3
