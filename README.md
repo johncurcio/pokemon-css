@@ -24,7 +24,7 @@ Pokédex Status
 * **OK** - can be improved upon, but it looks kind of nice
 * **YES** - it's near perfection, improving can be unnecessary
 
-How to contribute:
+Contributing
 ---
 
-No idea for now. 
+See [Contributing]()
