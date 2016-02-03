@@ -1,5 +1,8 @@
-# pokemon-css
-Minimalist pokemons created using only HTML and CSS3
+# Pokédex in CSS3
+---
+This library is an attempt to implement all of the pokédex using **mostly** HTML and CSS3. 
+
+This project began on *January 31st, 2016*. 
 
 If you want to see the CSS3 and HTML files in action you can see them at my [codepen.io account](http://codepen.io/johncurcio/pens/public/).
 
@@ -20,3 +23,8 @@ Pokédex Status
 * **BAD** - it should be improved upon
 * **OK** - can be improved upon, but it looks kind of nice
 * **YES** - it's near perfection, improving can be unnecessary
+
+How to contribute:
+---
+
+No idea for now. 
