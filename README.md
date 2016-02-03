@@ -1,6 +1,8 @@
 # pokemon-css
 Minimalist pokemons created using only HTML and CSS3
 
+If you want to see the CSS3 and HTML files in action you can see them at my [codepen.io account](http://codepen.io/johncurcio/pens/public/).
+
 Pokédex Status
 ---
 
