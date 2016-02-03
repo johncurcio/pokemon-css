@@ -3,7 +3,7 @@
 
 Pokédex in CSS3
 ---
-This library is an attempt to implement all of the pokédex using **mostly** HTML and CSS3. 
+This repo ``pokemon.css`` is an attempt to implement all of the pokédex using **mostly** HTML and CSS3. 
 
 This project began on *January 31st, 2016*. 
 
