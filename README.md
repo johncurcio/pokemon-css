@@ -27,4 +27,4 @@ Pokédex Status
 Contributing
 ---
 
-See [Contributing]()
+See [Contributing](CONTRIBUTING.md)
