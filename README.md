@@ -1,3 +1,6 @@
+![logo](logo.png)
+---
+
 Pokédex in CSS3
 ---
 This library is an attempt to implement all of the pokédex using **mostly** HTML and CSS3. 
