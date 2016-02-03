@@ -76,23 +76,32 @@ body{
   margin-left: 2.3em;
 }
 
+.nose:hover{
+  -ms-animation: squeeze .3s infinite ease;
+  -webkit-animation: squeeze .3s infinite ease;
+  -moz-animation: squeeze .3s infinite ease;
+  animation: squeeze .3s infinite ease;
+}
+
+
+
 .mouth {
-	position: absolute;
-	width: 2.28em;
-	height: 1.8em;
-	margin-top: 2em;
-	margin-left: 1.3em;
-	overflow: hidden;
+  position: absolute;
+  width: 2.28em;
+  height: 1.8em;
+  margin-top: 2em;
+  margin-left: 1.3em;
+  overflow: hidden;
 }
 
 .mouth::after,
 .mouth::before{
   content: '';
-	display: block;
-	position: absolute;
-	width: .9em;
-	height: .1em;
-	background: #faeea0;
+  display: block;
+  position: absolute;
+  width: .9em;
+  height: .1em;
+  background: #faeea0;
   border: .03em solid black;
   border-top: none;
   top: .05em;
@@ -100,41 +109,41 @@ body{
 } 
 
 .mouth::after {
-	border-left: none;
-	right: .2em;
-	border-bottom-right-radius: .2em .2em;
+  border-left: none;
+  right: .2em;
+  border-bottom-right-radius: .2em .2em;
 }
 
 .mouth::before {
-	border-right: none;
-	left: .25em;
-	border-bottom-left-radius: .2em .2em;
-	z-index: 1;
+  border-right: none;
+  left: .25em;
+  border-bottom-left-radius: .2em .2em;
+  z-index: 1;
 }
 
 .mouth > div {
-	position: absolute;
-	background: #FF485F;
-	width: 2.28em;
-	height: 8em;
-	border: .04em solid black;
-	border-bottom-left-radius: 1.5em 7em;
-	border-bottom-right-radius: 1.5em 7em;
-	margin-top: -6.37em;
-	overflow: hidden;
+  position: absolute;
+  background: #FF485F;
+  width: 2.28em;
+  height: 8em;
+  border: .04em solid black;
+  border-bottom-left-radius: 1.5em 7em;
+  border-bottom-right-radius: 1.5em 7em;
+  margin-top: -6.37em;
+  overflow: hidden;
 }
 
 .mouth > div:after {
-	content: '';
-	position: absolute;
-	display: block;
-	width: 1.6em;
-	height: 1em;
-	box-shadow: 0 -.7em 0 #9B000A;
-	bottom: .35em;
-	margin-left: .33em;
-	border-top-left-radius: 100%;
-	border-top-right-radius: 100%;
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1.6em;
+  height: 1em;
+  box-shadow: 0 -.7em 0 #9B000A;
+  bottom: .35em;
+  margin-left: .33em;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
 }
 
 .tooth{ 
@@ -193,4 +202,36 @@ body{
 
 .hand.left{
   margin-left: 4.8em;
+}
+
+@keyframes squeeze{
+  0%   {transform: scaleY(.75);}
+  25%  {transform: scaleY(.75);}
+  50%  {transform: scaleY(.75);}
+  75%  {transform: scaleY(.75);}
+  100% {transform: scaleY(1);}
+}
+
+@-ms-keyframes squeeze{
+  0%   {-ms-transform: scaleY(.75);}
+  25%  {-ms-transform: scaleY(.75);}
+  50%  {-ms-transform: scaleY(.75);}
+  75%  {-ms-transform: scaleY(.75);}
+  100% {-ms-transform: scaleY(1);}
+}
+
+@-moz-keyframes squeeze{
+  0%   {-moz-transform: scaleY(.75);}
+  25%  {-moz-transform: scaleY(.75);}
+  50%  {-moz-transform: scaleY(.75);}
+  75%  {-moz-transform: scaleY(.75);}
+  100% {-moz-transform: scaleY(1);}
+}
+
+@-webkit-keyframes squeeze{
+  0%   {-webkit-transform: scaleY(.75);}
+  25%  {-webkit-transform: scaleY(.75);}
+  50%  {-webkit-transform: scaleY(.75);}
+  75%  {-webkit-transform: scaleY(.75);}
+  100% {-webkit-transform: scaleY(1);}
 }
