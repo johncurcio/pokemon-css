@@ -1,18 +1,23 @@
+/*File that defines the drawing of the pokémon*/
+
 body{
   background: #faeea0;
-  font-size: 100px;
+  font-size: 80px;
 }
 
+/* This defines the centralized position of the pokemon in
+a manner that it changes while you decrease the window size */
 #victini{
   position: absolute;
   width: 4em;
-  height: 1em;
-  left: 20%;
-  -webkit-transform: translate(50%, 50%);
-  -ms-transform: translate(50%, 50%);
-  transform: translate(50%, 50%);  
+  height: 3em;
+  text-align: center;
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: calc(50% - 2.5em); 
 }
 
+/* Drawing of the light blue portion of the eye */
 .eye {
   width: 2em;
   height: 2em;
@@ -27,8 +32,8 @@ body{
   right: -1em;
 }
 
-.eye.left::after,
-.eye.right::after {
+/* Drawing of the dark blue portion of the eye */
+.eye::after {
   width: 1.8em;
   height: 1.8em;
   border: 0em solid black;
@@ -44,8 +49,8 @@ body{
   margin-left: .2em;
 }
 
-.eye.left::before,
-.eye.right::before {
+/* Drawing of the white portion of the eye */
+.eye::before {
   width: .5em;
   height: .5em;
   background: #f2eddf;
@@ -65,6 +70,7 @@ body{
   margin-left: .4em;
 }
 
+/* Drawing of the cute animated nose */
 .nose{
   width: .23em;
   height: .03em;
@@ -83,8 +89,7 @@ body{
   animation: squeeze .3s infinite ease;
 }
 
-
-
+/*Drawing/positioning of the annoying mouth, jesus christ*/
 .mouth {
   position: absolute;
   width: 2.28em;
@@ -94,6 +99,7 @@ body{
   overflow: hidden;
 }
 
+/*Drawing of the lips*/
 .mouth::after,
 .mouth::before{
   content: '';
@@ -121,6 +127,7 @@ body{
   z-index: 1;
 }
 
+/*Drawing of the tongue*/
 .mouth > div {
   position: absolute;
   background: #FF485F;
@@ -133,6 +140,7 @@ body{
   overflow: hidden;
 }
 
+/* Dark part of the mouth*/
 .mouth > div:after {
   content: '';
   position: absolute;
@@ -191,12 +199,16 @@ body{
   margin-left: .5em;
   -webkit-transform: rotate(30deg);
   -ms-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
   transform: rotate(30deg);  
 }
 
 .hand::after{
   -webkit-transform: rotate(-30deg);
   -ms-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
   transform: rotate(-30deg);  
 }
 
@@ -204,34 +216,23 @@ body{
   margin-left: 4.8em;
 }
 
+/*actual animation of the nose which works best on firefox and IE*/
 @keyframes squeeze{
-  0%   {transform: scaleY(.75);}
-  25%  {transform: scaleY(.75);}
-  50%  {transform: scaleY(.75);}
-  75%  {transform: scaleY(.75);}
-  100% {transform: scaleY(1);}
+  from   {transform: scaleY(.75);}
+  to {transform: scaleY(1);}
 }
 
 @-ms-keyframes squeeze{
-  0%   {-ms-transform: scaleY(.75);}
-  25%  {-ms-transform: scaleY(.75);}
-  50%  {-ms-transform: scaleY(.75);}
-  75%  {-ms-transform: scaleY(.75);}
-  100% {-ms-transform: scaleY(1);}
+  from   {-ms-transform: scaleY(.75);}
+  to {-ms-transform: scaleY(1);}
 }
 
 @-moz-keyframes squeeze{
-  0%   {-moz-transform: scaleY(.75);}
-  25%  {-moz-transform: scaleY(.75);}
-  50%  {-moz-transform: scaleY(.75);}
-  75%  {-moz-transform: scaleY(.75);}
-  100% {-moz-transform: scaleY(1);}
+  from  {-moz-transform: scaleY(.75);}
+  to {-moz-transform: scaleY(1);}
 }
 
 @-webkit-keyframes squeeze{
-  0%   {-webkit-transform: scaleY(.75);}
-  25%  {-webkit-transform: scaleY(.75);}
-  50%  {-webkit-transform: scaleY(.75);}
-  75%  {-webkit-transform: scaleY(.75);}
-  100% {-webkit-transform: scaleY(1);}
+  from   {-webkit-transform: scaleY(.75);}
+  to {-webkit-transform: scaleY(1);}
 }

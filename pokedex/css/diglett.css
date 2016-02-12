@@ -1,18 +1,23 @@
+/*File that defines the drawing of the pokémon*/
+
 body{
   background-color: #b59581;
   font-size: 100px;
 }
 
+/* This defines the centralized position of the pokemon in
+a manner that it changes while you decrease the window size */
 #diglett{
   position: absolute;
   width: 4em;
   height: 3em;
-  left: 25%;
-  -webkit-transform: translate(50%, 50%);
-  -ms-transform: translate(50%, 50%);
-  transform: translate(50%, 50%);  
+  text-align: center;
+  display: inline-block;
+  margin-top: 10%;
+  margin-left: calc(50% - 1.3em);
 }
 
+/* Drawing of the black portion of the eye */
 .eye {
   width: .37em;
   height: .92em;
@@ -26,9 +31,7 @@ body{
   right: 1.5em;
 }
 
-.eye.left{
-}
-
+/* Drawing of the white portion of the eye */
 .eye::after {
   width: .15em;
   height: .25em;
@@ -41,6 +44,7 @@ body{
   opacity: .8;
 }
 
+/* Drawing of the back portion of the nose */
 .nose{
   width: 2.67em;
   height: 1.33em;
@@ -50,6 +54,8 @@ body{
   position: absolute; 
   margin-top: 1.5em;
 }
+
+/* Drawing of the lighter portion of the nose */
 
 .nose::after{
   background-color: #e3b8d3;

@@ -1,18 +1,23 @@
+/*File that defines the drawing of the pokémon*/
+
 body{
   background: #524637;
   font-size: 100px;
 }
 
+/* This defines the centralized position of the pokemon in
+a manner that it changes while you decrease the window size */
 #pumpkaboo{
   position: absolute;
   width: 4em;
   height: 3em;
-  left: 25%;
-  -webkit-transform: translate(50%, 50%);
-  -ms-transform: translate(50%, 50%);
-  transform: translate(50%, 50%);  
+  text-align: center;
+  display: inline-block;
+  margin-top: 10%;
+  margin-left: calc(50% - 1.2em);  
 }
 
+/* Drawing of the dark yellow portion of the eye */
 .eye {
   width: .37em;
   height: .92em;
@@ -27,9 +32,7 @@ body{
   right: 1.5em;
 }
 
-.eye.left{
-}
-
+/* Drawing of the light yellow portion of the eye */
 .eye::after {
   width: .3em;
   height: .3em;
@@ -42,6 +45,7 @@ body{
   margin-top: .7em;
 }
 
+/* Drawing of brown triangle to create the mouth*/
 .mouth{
   position: absolute;
   width: 0;
@@ -50,9 +54,10 @@ body{
   border-width: 0 120px 101px 120px;
   border-color: transparent transparent #524637 transparent;
   top: 1em;
-  left: -..5em;
+  left: -.05em;
 }
 
+/* Drawing of the black triangle thingy which is its mouth*/
 .mouth::before{
   content: '';
   position: absolute;
@@ -66,6 +71,7 @@ body{
   top: -.05em;
 }
 
+/* Drawing of two triangles to create the teeth*/
 .tooth{ 
   width: 0;
   height: 0;
@@ -81,6 +87,8 @@ body{
   left: .62em;
   -webkit-transform: rotate(40deg);
   -ms-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
   transform: rotate(40deg);
 }
 
@@ -88,6 +96,8 @@ body{
   right: .62em;
   -webkit-transform: rotate(-40deg);
   -ms-transform: rotate(-40deg);
+  -moz-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
   transform: rotate(-40deg);
 }
 

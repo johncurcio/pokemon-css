@@ -1,18 +1,24 @@
+/*File that defines the drawing of the pokémon Butterfree*/
+
 body{
   background-color: #5b5475;
   font-size: 100px;
 }
 
+/* This defines the centralized position of the pokemon in
+a manner that it changes while you decrease the window size */
 #butterfree{
   position: absolute;
   width: 4em;
   height: 3em;
-  left: 25%;
-  -webkit-transform: translate(50%, 50%);
-  -ms-transform: translate(50%, 50%);
-  transform: translate(50%, 50%);
+  text-align: center;
+  display: inline-block;
+  margin-top: 8%;
+  margin-left: calc(50% - 1.5em);
 }
 
+/* Drawing of the eye with compatibility in the transform
+for Chrome, Firefox, IE, Opera and Safari */
 .eye {
   width: .67em;
   height: .92em;
@@ -26,15 +32,20 @@ body{
   right: .6em;
   -webkit-transform: rotate(-20deg);
   -ms-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
   transform: rotate(-20deg);
 }
 
 .eye.left{
   -webkit-transform: rotate(20deg);
   -ms-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
   transform: rotate(20deg);
 }
 
+/*Defines the first inner circle in the eye*/
 .eye::after {
   width: .35em;
   height: .5em;
@@ -48,6 +59,7 @@ body{
   opacity: 0.5;
 }
 
+/*Defines the most inner circle in the eye*/
 .eye::before {
   width: .2em;
   height: .3em;
@@ -61,6 +73,7 @@ body{
   opacity: 0.8;
 }
 
+/* Defines the back portion of the nose */
 .nose{
   width: .67em;
   height: .33em;
@@ -72,6 +85,7 @@ body{
   margin-left: 1.3em;
 }
 
+/* Defines the front (lighter) portion of the nose */
 .nose::after{
   background-color: #97becc;
   opacity: 0.5; 
@@ -84,6 +98,7 @@ body{
   margin-left: .13em;
 }
 
+/* Creates the little teeth */
 .tooth{ 
   width: 0;
   height: 0;
@@ -95,10 +110,13 @@ body{
   z-index: -1;
 }
 
+/* Rotates and separate the little teeth */
 .tooth.right{
   left: 1.9em;
   -webkit-transform: rotate(-15deg);
   -ms-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
   transform: rotate(-15deg);
 }
 
@@ -106,9 +124,12 @@ body{
   left: 1.35em;
   -webkit-transform: rotate(15deg);
   -ms-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
   transform: rotate(15deg);
 }
 
+/* Creates the rounded portion of the hand */
 .hand{
   position: absolute;
   height: .6em;
@@ -121,6 +142,7 @@ body{
   top: 2em;
 }
 
+/* Creates the triangles which are fingers */
 .hand .fingers,
 .hand .fingers::after,
 .hand .fingers::before{
@@ -132,6 +154,7 @@ body{
   border-right: .15em solid #5a93ad;
 }
 
+/*Separate the fingers*/
 .hand .fingers{
   right: .3em; 
 }
@@ -154,6 +177,8 @@ body{
   left: .5em;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -161,6 +186,8 @@ body{
   right: 1.2em;
 }
 
+/*Creates the black border in the triangles/fingers
+because we can't use the CSS border attribute directly*/
 .fingers .shadow,
 .fingers .shadow::after,
 .fingers .shadow::before{
