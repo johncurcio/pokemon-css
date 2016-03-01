@@ -1,0 +1,312 @@
+body{
+  background: #c41434;
+  font-size: 100px;
+}
+
+#pokemon-sun{
+  position: absolute;
+  width: 4em;
+  height: 3em;
+  text-align: center;
+  display: inline-block;
+  margin-top: 10%;
+  margin-left: calc(50% - 1.3em);
+  transform: rotate(-15deg);
+}
+
+.sun {
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  position: absolute;
+  background: rgba(250,167,25,1);
+  background: -moz-linear-gradient(top, rgba(250,167,25,1) 0%, rgba(245,135,32,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,167,25,1)), color-stop(100%, rgba(245,135,32,1)));
+  background: -webkit-linear-gradient(top, rgba(250,167,25,1) 0%, rgba(245,135,32,1) 100%);
+  background: -o-linear-gradient(top, rgba(250,167,25,1) 0%, rgba(245,135,32,1) 100%);
+  background: -ms-linear-gradient(top, rgba(250,167,25,1) 0%, rgba(245,135,32,1) 100%);
+  background: linear-gradient(to bottom, rgba(250,167,25,1) 0%, rgba(245,135,32,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faa719', endColorstr='#f58720', GradientType=0 );
+}
+
+.sun::before {
+  width: 1em;
+  height: 1em;
+  background: #fff;
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  margin-left: .5em;
+  margin-top: .5em;
+}
+
+.sun::after{
+  width: .8em;
+  height: .8em;
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  margin-top: .6em;
+  margin-left: .6em;
+  z-index: 1;
+  background: rgba(250,167,25,1);
+  background: -moz-linear-gradient(top, rgba(250,167,25,1) 0%, rgba(245,135,32,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,167,25,1)), color-stop(100%, rgba(245,135,32,1)));
+  background: -webkit-linear-gradient(top, rgba(250,167,25,1) 0%, rgba(245,135,32,1) 100%);
+  background: -o-linear-gradient(top, rgba(250,167,25,1) 0%, rgba(245,135,32,1) 100%);
+  background: -ms-linear-gradient(top, rgba(250,167,25,1) 0%, rgba(245,135,32,1) 100%);
+  background: linear-gradient(to bottom, rgba(250,167,25,1) 0%, rgba(245,135,32,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faa719', endColorstr='#f58720', GradientType=0 );
+}
+
+.spike{ 
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-right: .1em solid transparent;
+  border-left: .1em solid transparent;
+  z-index: 1;
+}
+
+.white{
+  border-top: .4em solid white;
+}
+
+.left-top{
+  margin-top: .45em;
+  margin-left: .5em;
+  transform: rotate(135deg);
+}
+
+.right-top{
+  margin-top: .45em;
+  margin-left: 1.3em;
+  transform: rotate(-135deg);
+}
+
+.right-bottom{
+  margin-top: 1.2em;
+  margin-left: 1.25em;
+  transform: rotate(-40deg);
+}
+
+.left-bottom{
+  margin-top: 1.2em;
+  margin-left: .55em;
+  transform: rotate(40deg);
+}
+
+.orange-top{
+  border-top: 1em solid #faa51b;
+}
+
+.orange-top.left{
+  bottom: 2.5em;
+  left: -.1em;
+  transform: rotate(135deg);
+}
+
+.orange-top.right{
+  bottom: 2.5em;
+  left: 1.9em;
+  transform: rotate(-135deg);
+}
+
+.orange-bottom{
+  border-top: 1em solid #f58a20;
+}
+
+.orange-bottom.left{
+  bottom: .4em;
+  left: 0em;
+  transform: rotate(40deg);
+}
+
+.orange-bottom.right{
+  bottom: .4em;
+  left: 1.85em;
+  transform: rotate(-40deg);
+}
+
+.small-orange-top{
+  border-top: .4em solid #faa51b;
+}
+
+.small-orange-bottom{
+  border-top: .4em solid #f58c22;
+}
+
+.small-orange-top.middle{
+  bottom: 2.9em;
+  margin-left: .9em;
+  transform: rotate(180deg);
+}
+
+.small-orange-bottom.middle{
+  bottom: .7em;
+  margin-left: .9em;
+}
+
+.small-orange-middle{
+  border-top: .4em solid #f59b25;
+}
+
+.small-orange-middle.left{
+  z-index: -1;
+  margin-top: .85em;
+  left: -.2em;
+  transform: rotate(90deg);
+}
+
+.small-orange-middle.right{
+  z-index: -1;
+  margin-top: .85em;
+  left: 2em;
+  transform: rotate(-90deg);
+}
+
+/*
+
+ANIMATIONS
+
+*/
+
+.spike.orange-top,
+.spike.orange-bottom,
+.spike.small-orange-bottom,
+.spike.small-orange-top,
+.spike.small-orange-middle{
+  z-index: -1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.spike.orange-top.left{
+  animation-name: shine-top-left-big;
+}
+
+@keyframes shine-top-left-big{
+  0%{transform: rotate(135deg) scaleY(1);}
+  50%{transform: rotate(135deg) scaleY(1.5);}
+  100%{transform: rotate(135deg) scaleY(1);}
+}
+
+.spike.orange-top.right{
+  animation-name: shine-top-right-big;
+}
+
+@keyframes shine-top-right-big{
+  0%{transform: rotate(-135deg) scaleY(1);}
+  50%{transform: rotate(-135deg) scaleY(1.5);}
+  100%{transform: rotate(-135deg) scaleY(1);}
+}
+
+.spike.orange-bottom.left{
+  animation-name: shine-bottom-left-big;
+}
+
+@keyframes shine-bottom-left-big{
+  0%{transform: rotate(40deg) scaleY(1);}
+  50%{transform: rotate(40deg) scaleY(1.5);}
+  100%{transform: rotate(40deg) scaleY(1);}
+}
+
+.spike.orange-bottom.right{
+  animation-name: shine-bottom-right-big;
+}
+
+@keyframes shine-bottom-right-big{
+  0%{transform: rotate(-40deg) scaleY(1);}
+  50%{transform: rotate(-40deg) scaleY(1.5);}
+  100%{transform: rotate(-40deg) scaleY(1);}
+}
+
+.spike.small-orange-bottom{
+  animation-name: shine-small-bottom;
+}
+
+@keyframes shine-small-bottom{
+  0%{transform: rotate(0deg) scaleY(1.5);}
+  50%{transform: rotate(0deg) scaleY(1);}
+  100%{transform: rotate(0deg) scaleY(1.5);}
+}
+
+.spike.small-orange-top{
+  animation-name: shine-small-top;
+}
+
+@keyframes shine-small-top{
+  0%{transform: rotate(180deg) scaleY(1.5);}
+  50%{transform: rotate(180deg) scaleY(1);}
+  100%{transform: rotate(180deg) scaleY(1.5);}
+}
+
+.spike.small-orange-middle.left{
+  animation-name: shine-small-middle-left;
+}
+
+@keyframes shine-small-middle-left{
+  0%{transform: rotate(90deg) scaleY(1.5);}
+  50%{transform: rotate(90deg) scaleY(1);}
+  100%{transform: rotate(90deg) scaleY(1.5);}
+}
+
+.spike.small-orange-middle.right{
+  animation-name: shine-small-middle-right;
+}
+
+@keyframes shine-small-middle-right{
+  0%{transform: rotate(-90deg) scaleY(1.5);}
+  50%{transform: rotate(-90deg) scaleY(1);}
+  100%{transform: rotate(-90deg) scaleY(1.5);}
+}
+
+
+.spike.white{
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.spike.white.right-top{
+  animation-name: shine-white-topright;
+}
+
+@keyframes shine-white-topright{
+  0%{transform: rotate(-135deg) scaleY(1.2);}
+  50%{transform: rotate(-135deg) scaleY(1);}
+  100%{transform: rotate(-135deg) scaleY(1.2);}
+}
+
+.spike.white.left-top{
+  animation-name: shine-white-topleft;
+}
+
+@keyframes shine-white-topleft{
+  0%{transform: rotate(135deg) scaleY(1.2);}
+  50%{transform: rotate(135deg) scaleY(1);}
+  100%{transform: rotate(135deg) scaleY(1.2);}
+}
+
+.spike.white.left-bottom{
+  animation-name: shine-white-bottomleft;
+}
+
+@keyframes shine-white-bottomleft{
+  0%{transform: rotate(40deg) scaleY(1.2);}
+  50%{transform: rotate(40deg) scaleY(1);}
+  100%{transform: rotate(40deg) scaleY(1.2);}
+}
+
+.spike.white.right-bottom{
+  animation-name: shine-white-bottomright;
+}
+
+@keyframes shine-white-bottomright{
+  0%{transform: rotate(-40deg) scaleY(1.2);}
+  50%{transform: rotate(-40deg) scaleY(1);}
+  100%{transform: rotate(-40deg) scaleY(1.2);}
+}
