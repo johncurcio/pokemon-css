@@ -21,12 +21,19 @@ Pokédex Status
 | # 494  | ![victini](http://cdn.bulbagarden.net/upload/0/0c/494MS.png) | Victini  |   ``OK``    |
 | # 710  | ![pumkaboo](http://cdn.bulbagarden.net/upload/5/5e/710MS.png) | Pumpkaboo  |   ``OK``    |
 
+Logo Status
+---
+
+| gen   | pokemon        |  status  |
+| ------ |:-------------:|  :-----: |
+| # 7  | Sun |   ``YES``    |
+| # 7  | Moon |   ``YES``   |
+
 ### Status Caption:
 
 * ``BAD`` - it should be improved upon
 * ``OK`` - can be improved upon, but it looks kind of nice
 * ``YES`` - it's near perfection, improving can be unnecessary
-
 
 Contributing
 ---
